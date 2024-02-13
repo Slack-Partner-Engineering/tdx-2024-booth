@@ -17,12 +17,29 @@ mf.mock("POST@/api/chat.postMessage", () => {
   );
 });
 
-Deno.test("Sample function test", async () => {
-  const inputs = { message: "Hello, World!", user: "U01234567" };
+Deno.test("Create a ticket successfully", async () => {
+  const inputs = { 
+    title: "Webservices down", 
+    description: "AMER region down",
+    severity: "high",
+    channel: "C01234567"
+    user: "U01234567" };
   const { outputs } = await SampleFunction(createContext({ inputs }));
   await assertEquals(
-    outputs?.message,
-    "Hello, World!",
+    outputs?.title,
+    "Webservices down",
+  );
+  await assertEquals(
+    outputs?.description,
+    "AMER region down",
+  );
+  await assertEquals(
+    outputs?.severity,
+    "high",
+  );
+  await assertEquals(
+    outputs?.channel,
+    "C01234567",
   );
   await assertEquals(
     outputs?.user,
