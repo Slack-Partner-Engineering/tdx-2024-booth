@@ -1,0 +1,11 @@
+{
+  "apps": {
+    "T041A42JQJF": {
+      "app_id": "A06KB95QX5E",
+      "IsDev": false,
+      "team_domain": "solarcircles",
+      "team_id": "T041A42JQJF"
+    }
+  },
+  "default": "solarcircles"
+}
