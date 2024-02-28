@@ -1,4 +1,7 @@
 {
+    "_metadata": {
+        "major_version": 2
+    },
     "display_information": {
         "name": "Solar Circles Ticketing JS"
     },
@@ -33,53 +36,59 @@
             "title": "Create ticket",
             "description": "Additions to the backlog",
             "input_parameters": {
-                "title": {
-                    "type": "string",
-                    "description": "Title of the ticket",
-                    "is_required": true
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "description": "Title of the ticket"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Description of the ticket"
+                    },
+                    "severity": {
+                        "type": "string",
+                        "description": "Urgency of the ticket"
+                    },
+                    "channel": {
+                        "type": "slack#/types/channel_id",
+                        "description": "Channel to alert"
+                    },
+                    "user": {
+                        "type": "slack#/types/user_id",
+                        "description": "User who has submitted the ticket"
+                    }
                 },
-                "description": {
-                    "type": "string",
-                    "description": "Description of the ticket",
-                    "is_required": true
-                },
-                "severity": {
-                    "type": "string",
-                    "description": "Severity of the ticket",
-                    "is_required": true
-                },
-                "channel": {
-                    "type": "slack#/types/channel_id",
-                    "description": "Channel to alert",
-                    "is_required": true
-                },
-                "user": {
-                    "type": "slack#/types/user_id",
-                    "description": "User who has submitted the ticket",
-                    "is_required": true
-                }
+                "required": [
+                    "title",
+                    "description",
+                    "severity",
+                    "channel",
+                    "user"
+                ]
             },
             "output_parameters": {
-                "title": {
-                    "type": "string",
-                    "description": "Title of the ticket",
-                    "is_required": true
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "description": "Title of the ticket"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Description of the ticket"
+                    },
+                    "severity": {
+                        "type": "string",
+                        "description": "Severity of the ticket"
+                    },
+                    "channel": {
+                        "type": "slack#/types/channel_id",
+                        "description": "Channel to alert"
+                    }
                 },
-                "description": {
-                    "type": "string",
-                    "description": "Description of the ticket",
-                    "is_required": true
-                },
-                "severity": {
-                    "type": "string",
-                    "description": "Severity of the ticket",
-                    "is_required": true
-                },
-                "channel": {
-                    "type": "slack#/types/channel_id",
-                    "description": "Channel to alert",
-                    "is_required": true
-                }
+                "required": [
+                    "message",
+                    "user"
+                ]
             }
         }
     },
