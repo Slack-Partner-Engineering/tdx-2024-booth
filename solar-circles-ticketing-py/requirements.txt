@@ -1,0 +1,5 @@
+slack-cli-hooks
+slack-bolt==1.19.0rc1
+flake8==7.0.0
+black==24.1.1
+pytest
