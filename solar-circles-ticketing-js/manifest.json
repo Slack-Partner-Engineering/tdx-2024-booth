@@ -1,6 +1,6 @@
 {
     "display_information": {
-        "name": "solar-circles-ticketing-js"
+        "name": "Solar Circles Ticketing JS"
     },
     "features": {
         "app_home": {
@@ -9,7 +9,7 @@
             "messages_tab_read_only_enabled": true
         },
         "bot_user": {
-            "display_name": "solar-circles-ticketing-js",
+            "display_name": "Solar Circles Ticketing JS",
             "always_online": false
         }
     },
