@@ -1,0 +1,87 @@
+{
+    "display_information": {
+        "name": "solar-circles-ticketing-js"
+    },
+    "features": {
+        "app_home": {
+            "home_tab_enabled": true,
+            "messages_tab_enabled": true,
+            "messages_tab_read_only_enabled": true
+        },
+        "bot_user": {
+            "display_name": "solar-circles-ticketing-js",
+            "always_online": false
+        }
+    },
+    "oauth_config": {
+        "scopes": {
+            "bot": [
+                "chat:write"
+            ]
+        }
+    },
+    "settings": {
+        "interactivity": {
+            "is_enabled": true
+        },
+        "org_deploy_enabled": true,
+        "socket_mode_enabled": true,
+        "token_rotation_enabled": false
+    },
+    "functions": {
+        "create_ticket": {
+            "title": "Create ticket",
+            "description": "Additions to the backlog",
+            "input_parameters": {
+                "title": {
+                    "type": "string",
+                    "description": "Title of the ticket",
+                    "is_required": true
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Description of the ticket",
+                    "is_required": true
+                },
+                "severity": {
+                    "type": "string",
+                    "description": "Severity of the ticket",
+                    "is_required": true
+                },
+                "channel": {
+                    "type": "slack#/types/channel_id",
+                    "description": "Channel to alert",
+                    "is_required": true
+                },
+                "user": {
+                    "type": "slack#/types/user_id",
+                    "description": "User who has submitted the ticket",
+                    "is_required": true
+                }
+            },
+            "output_parameters": {
+                "title": {
+                    "type": "string",
+                    "description": "Title of the ticket",
+                    "is_required": true
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Description of the ticket",
+                    "is_required": true
+                },
+                "severity": {
+                    "type": "string",
+                    "description": "Severity of the ticket",
+                    "is_required": true
+                },
+                "channel": {
+                    "type": "slack#/types/channel_id",
+                    "description": "Channel to alert",
+                    "is_required": true
+                }
+            }
+        }
+    },
+    "outgoing_domains": []
+}
