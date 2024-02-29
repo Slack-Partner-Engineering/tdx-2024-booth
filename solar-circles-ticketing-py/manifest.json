@@ -1,0 +1,97 @@
+{
+  "_metadata": {
+    "major_version": 2
+  },
+  "display_information": {
+    "name": "Solar Circle Ticketing (py)",
+    "description": "An internal ticketing service for Solar Circle"
+  },
+  "features": {
+    "app_home": {
+      "messages_tab_enabled": true,
+      "messages_tab_read_only_enabled": true
+    },
+    "bot_user": {
+      "display_name": "Solar Circle Ticketing (py)"
+    }
+  },
+  "oauth_config": {
+    "scopes": {
+      "bot": [
+        "commands",
+        "chat:write",
+        "chat:write.public"
+      ]
+    }
+  },
+  "settings": {
+    "interactivity": {
+      "is_enabled": true
+    },
+    "org_deploy_enabled": true,
+    "socket_mode_enabled": true,
+    "token_rotation_enabled": false
+  },
+  "outgoing_domains": [],
+  "functions": {
+    "sample_function": {
+      "title": "Create ticket",
+      "description": "",
+      "input_parameters": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Title of the ticket"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the ticket"
+          },
+          "severity": {
+            "type": "string",
+            "description": "Severity of the ticket"
+          },
+          "channel": {
+            "type": "slack#/types/channel_id",
+            "description": "Channel to alert"
+          },
+          "user": {
+            "type": "slack#/types/user_id",
+            "description": "User who has submitted the ticket"
+          }
+        },
+        "required": [
+          "title",
+          "description",
+          "severity",
+          "channel",
+          "user"
+        ]
+      },
+      "output_parameters": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Title of the ticket"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the ticket"
+          },
+          "severity": {
+            "type": "string",
+            "description": "Severity of the ticket"
+          },
+          "channel": {
+            "type": "slack#/types/channel_id",
+            "description": "Channel to alert"
+          }
+        },
+        "required": [
+          "message",
+          "user"
+        ]
+      }
+    }
+  }
+}
